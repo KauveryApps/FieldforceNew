@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.leaverequest.LeaveRequesttesting">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:src="@drawable/backarrow"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:text="LEAVE REQUEST"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginLeft="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left">
+
+                        <ImageView
+                            android:id="@+id/fromdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/frmbtnDatePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rectangle_98_shape"
+                            android:gravity="center"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/todate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/tobtnDatePicker"
+                            android:layout_width="100dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rectangle_98_shape"
+                            android:gravity="center"
+                            android:text="To"
+                            android:textAllCaps="false"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoregular"
+                        android:textStyle="bold"
+                        android:text="Reason for Applying Leave :"
+                        android:textColor="#000" />
+
+                    <EditText
+                        android:id="@+id/eaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="top"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/bg_rounded_input_field"
+                        android:maxLines="10" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginLeft="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left">
+
+                            <Button
+                                android:id="@+id/savebtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary"
+                                android:fontFamily="@font/robotoregular"
+                                android:gravity="center"
+                                android:text="Apply Leave"
+                                android:enabled="false"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left">
+
+                            <Button
+                                android:id="@+id/cancelbtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="20dp"
+                                android:background="@color/colorPrimary"
+                                android:fontFamily="@font/robotoregular"
+                                android:gravity="center"
+                                android:text="Cancel Leave"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

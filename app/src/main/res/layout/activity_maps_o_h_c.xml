@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAdmin.MapsActivityAdmin"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/backarrow"/>
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            android:text="EMPLOYEE TRACKING"/>
+        <ImageView
+            android:id="@+id/loggedout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/ic_logout"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="4"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/empids"
+                android:layout_below="@+id/corpaddress"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/edittext"
+                app:hintText="SELECT EMPLOYEE" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+           android:padding="5dp"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                >
+
+                <ImageView
+                    android:id="@+id/fromdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="5dp"
+
+                    android:src="@drawable/ic_baseline_calendar_today_24"
+                    android:text="From"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/frmbtnDatePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_98_shape"
+                    android:gravity="center"
+                    android:text="From"
+                    android:textAllCaps="false"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/todate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="5dp"
+
+                    android:src="@drawable/ic_baseline_calendar_today_24"
+
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tobtnDatePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_98_shape"
+                    android:gravity="center"
+                    android:text="To"
+                    android:textAllCaps="false"
+                    android:textColor="#000000" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAdmin.MapsActivityOHC" />
+</LinearLayout>

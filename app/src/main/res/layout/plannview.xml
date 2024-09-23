@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="10.0"
+            android:weightSum="12.0"
+            android:layout_marginLeft="10dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0"
+                android:weightSum="2.0"
+                android:layout_marginBottom="1.5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Customer Name"
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    android:id="@+id/textView99"
+                    android:layout_weight="1.0"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/cusname"
+                    android:textColor="#000000"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.0"
+                android:weightSum="2.0"
+                android:layout_marginBottom="1.5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Corporate"
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    android:id="@+id/textView5"
+                    android:layout_weight="1.0"
+                    />
+
+                <TextView
+                    android:id="@+id/crpname"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:singleLine="false"
+                    android:maxLines="2"
+                    android:text="New Text"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    android:text="Status"
+                    android:id="@+id/textView3"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/status"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="CheckIn Time"
+                    android:id="@+id/textView9"
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/checkintime"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="CheckOut Time"
+
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/checkouttime"
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Joint Call 1"
+
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/joint1"
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Joint Call 2"
+
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/joint2"
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:weightSum="2.0"
+                android:layout_marginBottom="0.5dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Joint Call 3"
+
+                    android:textStyle="bold"
+                    android:textColor="#d9004c"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:text="New Text"
+                    android:id="@+id/joint3"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.MyAgendaToday.PlannedvisitchkinActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/backarrow"/>
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:text="PLANNED CHECKIN"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/layoutone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Customer"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/getcustmer"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:ems="15"
+                            android:textStyle="bold"
+                            android:gravity="start|center"
+                            android:paddingLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layouttwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layoutone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content"
+
+                            android:text="Check In Time">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/getchkintime"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:ems="15"
+                            android:gravity="start|center"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutthree"
+                        android:layout_below="@+id/layouttwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Joint Call 1"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/getjoint1"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:textStyle="bold"
+                            android:gravity="start|center"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:paddingLeft="10dp"
+                            android:background="@drawable/edittext"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutfour"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/layoutthree"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Joint Call 2"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/getjoint2"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/unplanvisitid"
+                            android:layout_margin="12dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            android:gravity="start|center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext"
+                           />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layoutfive"
+                        android:layout_below="@+id/layoutfour"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Joint Call 3"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/getjoint3"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/checkintime"
+                            android:layout_margin="12dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            android:gravity="start|center"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext"
+                           />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layoutsix"
+                        android:layout_below="@id/layoutfive"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Visit Purpose"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/visitpurpose"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/checkout_time"
+                            android:layout_margin="12dp"
+                            app:hintText="Select Visit Purpose"
+                            android:background="@drawable/edittext" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnpchkin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:text="Apply CheckIn"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

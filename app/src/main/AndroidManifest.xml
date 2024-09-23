@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kauveryhospital.fieldforce">
+    <!--The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.-->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/kauverys"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/kauverys"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:hardwareAccelerated="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UseronlyAccess.unplanned.PlannedMainActivity"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".UserAdmin.MapsActivityOHC"
+            android:label="@string/title_activity_maps_o_h_c" />
+        <activity android:name=".UseronlyAccess.MyAgendaToday.ViewPlannedVisits" />
+        <activity android:name=".UseronlyAccess.MyAgendaToday.PlannedvisitchkoutActivity" />
+        <activity android:name=".UseronlyAccess.MyAgendaToday.PlannedvisitchkinActivity" />
+        <activity android:name=".UseronlyAccess.MyAgendaToday.PlannedCheckInActivity" />
+        <activity android:name=".OHCOnly.WorkStartOHC" />
+        <activity android:name=".UseronlyAccess.unplanned.ViewUnplannedvisits" />
+        <activity android:name=".UseronlyAccess.EmployeeMapping.EmpContactMapping" />
+        <activity android:name=".UserAdmin.Mapdata.EmployeeContactMapping" />
+        <activity android:name=".UseronlyAccess.planned.OfflineCheckoutActivity" />
+        <activity android:name=".UseronlyAccess.unplanned.OfflineActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity
+            android:name=".UseronlyAccess.leaverequest.LeaveRequesttesting"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.LeaveApprovedAdmin.LeaveTabActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.checkoutadmin.CheckoutActivityadmin"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.unplanvisitAdmin.unplannedvisit"
+            tools:ignore="Instantiatable" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+
+        <activity
+            android:name=".UserAdmin.MapsActivityAdmin"
+            android:label="@string/title_activity_maps_admin"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.contactadmin.UpdateActivityadmin"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.contactadmin.ContactActivityadmin"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UserAdmin.corporateadmin.CorporateActivityadmin"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.travelExpenses.ListTravelExpensesActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".UseronlyAccess.travelExpenses.TravelExpActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.unplanned.UnPlannedActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.leaverequest.CancelRequestActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.contact.ListContactActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.contact.ContactActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.planned.CheckoutActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.corporate.ListCorporateActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.corporate.CorporateActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".UseronlyAccess.EmployeeMapping.VisitPlanActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".workstartserviceuseronly.WorkStartActivity"
+            android:label="@string/title_activity_work_start"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Loginscreen.LoginActivity"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".WelcomeActivity"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".workstartserviceuseronly.MyBackgroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"
+            android:stopWithTask="false" />
+        <service
+            android:name=".AutoDownloadService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities=".fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+    </application>
+
+</manifest>

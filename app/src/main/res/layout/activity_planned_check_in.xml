@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.MyAgendaToday.PlannedCheckInActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:src="@drawable/backarrow"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:adjustViewBounds="true"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:text="VISIT PLAN CHECK-IN/CHECK-OUT"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/viewlist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="MY WORK FOR TODAY"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/viewlist"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edittextsrc"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:hint="  Search..."
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:layout_height="wrap_content">
+                </EditText>
+                <androidx.recyclerview.widget.RecyclerView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:id="@+id/recyclerViewcontact"
+                    tools:context="example.javatpoint.com.recyclerviewlist.MainActivity">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

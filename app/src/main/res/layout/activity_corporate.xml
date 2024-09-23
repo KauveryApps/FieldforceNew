@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.corporate.CorporateActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/backarrow"/>
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            android:text="CORPORATE"/>
+        <ImageView
+            android:id="@+id/viewlist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/viewlist"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layoutone"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Name"
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <EditText
+                            android:id="@+id/corpname"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="start|left"
+                            android:inputType="textCapSentences"
+                            android:fontFamily="@font/calibri"
+                            android:background="@drawable/edittext"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layouttwos"
+                        android:layout_below="@id/layoutone"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Address *"
+
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <EditText
+
+                            android:id="@+id/corpaddress"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/edittext"
+                            android:fontFamily="@font/calibri"
+                            android:layout_height="65dp"
+                            android:gravity="top"
+                            android:layout_gravity="start|left"
+                            android:paddingLeft="10dp"
+                            android:inputType="textCapSentences"
+                            android:layout_margin="12dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layone"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/layouttwos"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="State *"
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/state"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select State" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/laytwo"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/layone"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="City *"
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/city"
+                            android:layout_below="@id/layone"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            app:hintText="Select City"
+                            android:background="@drawable/edittext"
+                            android:layout_margin="12dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/laythree"
+                        android:layout_below="@id/laytwo"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Area"
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/area"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Area"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/layfour"
+                        android:layout_below="@+id/laythree"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Pincode"
+                            android:textSize="18dp"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/calibri"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="start|left"
+                            android:textStyle="bold"
+                            android:text="Select Pincode"
+                            android:textSize="18dp"
+                            android:padding="6dp"
+                            android:inputType="textCapSentences"
+                            android:fontFamily="@font/calibri"
+                            android:background="@drawable/edittext"
+                            />
+                        <!-- <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                             android:id="@+id/pincode"
+                             android:layout_width="match_parent"
+                             android:layout_height="35dp"
+                             android:layout_margin="12dp"
+                             android:textStyle="bold"
+                             android:fontFamily="@font/robotoregular"
+                             android:background="@drawable/edittext"
+                             app:hintText="Select pincode" />-->
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_below="@+id/layfour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:padding="18dp"
+                        android:text="Active"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="1"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/calibri"
+                        android:gravity="center"
+
+
+                        android:text="Save"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>

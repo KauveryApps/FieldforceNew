@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.travelExpenses.TravelExpActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/backarrow"/>
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/robotoregular"
+            android:text="TRAVEL EXPENSES"/>
+        <ImageView
+            android:id="@+id/viewlist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/viewlist"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ones"
+                       android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="left">
+
+                        <ImageView
+                            android:id="@+id/fromdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/calen"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/frmbtnDatePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rectangle_98_shape"
+                            android:gravity="center"
+                            android:text="SELECT DATE"
+                            android:textStyle="bold"
+                            android:textAllCaps="false"
+                            android:textColor="#0d6e3f" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutthree"
+                        android:layout_below="@+id/ones"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Kilometers"
+                            android:layout_marginLeft="16dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:textStyle="bold"
+                            android:layout_marginRight="16dp"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/edkilometers"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:inputType="number"
+                            android:layout_gravity="left|center"
+                            android:textSize="15dp"
+                            android:layout_below="@+id/layouttwo"
+                            android:layout_margin="12dp"
+                            android:textStyle="bold"
+                            android:paddingLeft="10dp"
+                            android:background="@drawable/edittext"
+                            />
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/layoutthree"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/closed_camera"
+                            android:layout_width="300dp"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:src="@drawable/closed" />
+
+                        <ImageView
+                            android:id="@+id/closed_camera_open"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:scaleType="center"
+                            android:src="@drawable/unnamed"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnsave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:text="Save"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btnLogina"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

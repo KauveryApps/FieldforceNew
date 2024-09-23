@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.EmployeeMapping.VisitPlanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backarrow"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:adjustViewBounds="true"
+                android:textStyle="bold"
+                android:src="@drawable/backarrow"/>
+
+            <TextView
+                android:id="@+id/toolbar_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="30dp"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:text="PLANNED VISIT"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/viewlist"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:text="MY WORK FOR TODAY"
+                android:layout_marginRight="10dp"
+                android:adjustViewBounds="true"
+                android:textStyle="bold"
+                android:src="@drawable/viewlist"/>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:id="@+id/layoutone"
+                        android:gravity="left">
+
+                        <ImageView
+                            android:id="@+id/fromdate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/frmbtnDatePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rectangle_98_shape"
+                            android:gravity="center"
+                            android:text="From"
+                            android:textAllCaps="false"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layouts"
+                        android:layout_below="@+id/layoutone"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="Contact Type *" />
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/contacttype"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_below="@+id/corpaddress"
+                            android:layout_margin="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Contact Type" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/laytens"
+                        android:layout_below="@+id/layouts"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="Customer *" />
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/customer"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_below="@+id/corpaddress"
+                            android:layout_margin="12dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Customer" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layfive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/laytens"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="Address">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/addressofselect"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:paddingLeft="10dp"
+                            android:maxLines="5"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:inputType="textCapSentences" />
+                    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/tens"
+    android:layout_below="@+id/layfive"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/robotoregular"
+        android:text="Corporate">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/corp_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="10dp"
+        android:maxLines="3"
+        android:layout_margin="12dp"
+        android:background="@drawable/edittext"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:inputType="textCapSentences" />
+</LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layoutss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tens"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="Visit Purpose">
+
+                        </TextView>
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/visitpurpose"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Visit Purpose" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/laysix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutss"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_height="wrap_content"
+                            android:text="Joint Call 1">
+
+                        </TextView>
+
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/employeejointone"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Employee" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layseven"
+                        android:layout_below="@+id/laysix"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Joint Call 2"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/employeejointtwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Employee" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layeight"
+                        android:layout_below="@+id/layseven"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Joint Call 3"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/robotoregular"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/employeejointthree"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:fontFamily="@font/robotoregular"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Employee" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btnSaveContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text="Save"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

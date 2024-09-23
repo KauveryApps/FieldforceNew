@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/location"
+                    android:layout_height="30dp">
+
+                </ImageView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Welcome To Field Force App"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25dp"
+                    android:text="   This App allow You to receive the location updates while using the app.In Order for this feature to work ,please approve access to your location via the button below.And also read the call logs and phone state."/>
+                <Button
+                    android:id="@+id/buttonaccess"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:text="Approve Location Access"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="wrap_content">
+
+                </Button>
+                <TextView
+                    android:id="@+id/location_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#333"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/updated_on"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="11dp"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/txtview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textSize="11dp"
+                    android:visibility="invisible"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
